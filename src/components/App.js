@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./../styles/App.css";
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(2);
   return (
     <div
       style={{
@@ -12,9 +12,9 @@ const App = () => {
         alignItems: "center",
       }}
     >
-      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={() => setCount(count + 1)}>increment</button>
       <h1 style={{ margin: 0 }}>{count}</h1>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
+      <button onClick={() => setCount(count - 1)}>decrement</button>
     </div>
   );
 };
