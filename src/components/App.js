@@ -12,11 +12,9 @@ const App = () => {
         alignItems: "center",
       }}
     >
-      <h1>
-        <button onClick={() => setCount(count + 1)}>increment</button>
-        {count}
-        <button onClick={() => setCount(count - 1)}>decrement</button>
-      </h1>
+      <button onClick={() => setCount(count - 1)}>decrement</button>
+      <h1>{count}</h1>
+      <button onClick={() => setCount(count + 1)}>increment</button>
     </div>
   );
 };
