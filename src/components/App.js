@@ -1,24 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "./../styles/App.css";
 
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+
+import { increaseCount, decreseCount } from "../actions/counterActions";
+
 const App = () => {
-  const [count, setCount] = useState(0);
+  const dispatch = useDispatch();
+
+  const counter = useSelector((state) => state);
+  console.log(counter);
+
   return (
-    <div
-      style={{
-        display: "flex",
-        gap: "15px",
-        height: "20px",
-        alignItems: "center",
-      }}
-    >
-      <button onClick={() => setCount(count + 1)}>
-        <h1>increment</h1>
-      </button>
-      <h1>{count}</h1>
-      <button onClick={() => setCount(count - 1)}>
-        <h1>decrement</h1>{" "}
-      </button>
+    <div>
+      <h1>{counter}</h1>
+      <button onClick={() => dispatch(increaseCount())}>increment</button>
+      <button onClick={() => dispatch(decreseCount())}>decrement</button>
     </div>
   );
 };
