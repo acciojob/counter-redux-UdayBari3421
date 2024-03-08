@@ -4,7 +4,7 @@ import "./../styles/App.css";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
-import { increaseCount, decreseCount } from "../actions/counterActions";
+import { increaseCount, decreseCount } from "../redux/actions/counterActions";
 
 const App = () => {
   const dispatch = useDispatch();
